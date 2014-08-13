@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Backbone</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+        <script type='text/template' id='user'>
+            
+            <div class='form-group'>
+            <form role='form' id='userForm'>
+
+                <div class='form-group' >
+                    <label for='firstName'>Nombres</label>
+                    <input type='text' class='form-control' id='firstName' name='firstName' placeholder='Enter value' value='<%= user.get('firstName') %>'/>	
+                </div>
+
+                <div class='form-group' >
+                    <label for='lastName'>Apellidos</label>
+                    <input type='text' class='form-control' id='lastName' name='lastName' placeholder='Enter value' value='<%= user.get('lastName') %>'/>	
+                </div>
+        
+                <div class='form-group' >
+                    <label for='date'>Date</label>
+                    <input type='text' class='form-control' id='date' name='date' placeholder='Enter value' value='<%= user.get('date') %>'/>	
+                </div>
+
+                <a onclick="Backbone.trigger('user-save'); return false" >Guardar</a> |
+                <a onclick="Backbone.trigger('user-cancel'); return false" >Cancelar</a> |
+            </form>    
+        </div>
+    </script>
+    </head>
+    <body>
+        <div class="span4">
+            <div class ="col-sm-4 col-sm-offset-4" id="msj">
+                <!--<input type="text" class="datepicker" id="datepicker" />-->
+            </div>
+        </div>        
+    </body>
+</html>

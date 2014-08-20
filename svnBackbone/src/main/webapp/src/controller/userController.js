@@ -16,6 +16,7 @@ App.Controller.UserController = Backbone.View.extend({
         });
         
         alert("Holaa");
+        alert("1233");
         Backbone.on('user-save', function(params) {
             self.save(params);
         });

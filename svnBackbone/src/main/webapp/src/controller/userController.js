@@ -14,6 +14,8 @@ App.Controller.UserController = Backbone.View.extend({
         Backbone.on('user-create', function(params) {
             self.create(params);
         });
+        
+        alert("Holaa");
         Backbone.on('user-save', function(params) {
             self.save(params);
         });
